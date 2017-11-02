@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+
+# external libraries
+node_modules
+
+# Optional npm cache directory
+.npm
+
+# others
+.DS_Store

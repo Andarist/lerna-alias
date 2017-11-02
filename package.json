@@ -1,0 +1,35 @@
+{
+  "name": "lerna-alias",
+  "version": "1.0.0",
+  "description": "Get aliases for your lerna packages for the other tools",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andarist/lerna-alias.git"
+  },
+  "keywords": [
+    "lerna",
+    "monorepo",
+    "alias",
+    "webpack",
+    "rollup",
+    "jest"
+  ],
+  "author": "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andarist/lerna-alias/issues"
+  },
+  "homepage": "https://github.com/Andarist/lerna-alias#readme",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4"
+  },
+  "dependencies": {
+    "glob": "^7.1.2"
+  }
+}
