@@ -4,8 +4,13 @@
   "description": "Get aliases for your lerna packages for the other tools",
   "main": "lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "lint-staged"
+    "test": "npm run test:warn && exit 1",
+    "test:warn": "echo \"Error: no test specified\"",
+    "precommit": "lint-staged",
+    "prerelease": "npm run test:warn",
+    "release:patch": "npm run prerelease && npm version patch && npm publish && git push --follow-tags",
+    "release:minor": "npm run prerelease && npm version minor && npm publish && git push --follow-tags",
+    "release:major": "npm run prerelease && npm version major && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",
