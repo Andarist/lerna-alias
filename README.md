@@ -37,7 +37,7 @@ type Aliases = {
 ## with webpack
 
 ```js
-const lernaAliases = require('lerna-alias')
+const { webpack: lernaAliases } = require('lerna-alias')
 
 module.exports = {
   // ...
@@ -51,7 +51,7 @@ module.exports = {
 ## with Rollup
 
 ```js
-const alias = require('rollup-plugin-alias')
+const { rollup: lernaAliases } = require('lerna-alias')
 const lernaAliases = require('lerna-alias')
 
 module.exports = {
@@ -66,7 +66,7 @@ module.exports = {
 ## with Jest
 
 ```js
-const lernaAliases = require('lerna-alias')
+const { jest: lernaAliases } = require('lerna-alias')
 
 module.exports = {
   // ...
@@ -77,7 +77,7 @@ module.exports = {
 ## using `mainFields` option
 
 ```js
-const lernaAliases = require('lerna-alias')
+const { jest: lernaAliases } = require('lerna-alias')
 
 module.exports = {
   // ...
