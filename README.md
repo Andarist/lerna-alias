@@ -7,7 +7,16 @@ It just eases development and setting up scripts depending on other lerna packag
 ## API
 
 ```js
-lernaAliases(directory: string = process.cwd()): Aliases
+lernaAliases({
+  // from which directory lerna monorepo should be searched for
+  directory: string = process.cwd(),
+  // optional array of `mainFields` that should be used to resolv package's entry point
+  // similar to the https://webpack.js.org/configuration/resolve/#resolve-mainfields
+  // using this takes precedence over default `sourceDirectory` option
+  mainFields?: string[],
+  // which directory should be considered as containing source files of a package
+  sourceDirectory: string = 'src'
+}): Aliases
 ```
 
 ## Types
@@ -16,7 +25,7 @@ lernaAliases(directory: string = process.cwd()): Aliases
 ```js
 type Aliases = {
   // value is a local directory path to the package
-  // it assumes entry point of the package is src/index.js
+  // resolved using `sourceDirectory` and `mainFields` options
   [packageName: string]: string
 }
 ```
@@ -62,4 +71,16 @@ module.exports = {
   moduleNameMapper: lernaAliases(),
 }
 ```
+
+## using `mainFields` option
+
+```js
+const lernaAliases = require('lerna-alias')
+
+module.exports = {
+  // ...
+  moduleNameMapper: lernaAliases({ mainFields: ['main'] }),
+}
+```
+
 
