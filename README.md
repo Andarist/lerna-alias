@@ -15,18 +15,20 @@ lernaAliases({
   // using this takes precedence over default `sourceDirectory` option
   mainFields?: string[],
   // which directory should be considered as containing source files of a package
-  sourceDirectory: string = 'src'
+  // if specified as false it will use package's root and rely on a tool's (i.e. webpack) resolving algorithm
+  sourceDirectory: string | false = 'src'
 }): Aliases
 ```
 
 ## Types
 
 **Aliases**
+
 ```js
 type Aliases = {
   // value is a local directory path to the package
   // resolved using `sourceDirectory` and `mainFields` options
-  [packageName: string]: string
+  [packageName: string]: string,
 }
 ```
 
@@ -82,5 +84,3 @@ module.exports = {
   moduleNameMapper: lernaAliases({ mainFields: ['main'] }),
 }
 ```
-
-
