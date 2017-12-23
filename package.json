@@ -1,9 +1,11 @@
 {
   "name": "lerna-alias",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Get aliases for your lerna packages for the other tools",
   "main": "lib",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "npm run test:warn && exit 1",
     "test:warn": "echo \"Error: no test specified\"",
