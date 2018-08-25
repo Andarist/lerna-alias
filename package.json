@@ -1,6 +1,6 @@
 {
   "name": "lerna-alias",
-  "version": "3.0.2",
+  "version": "3.0.3-0",
   "description": "Get aliases for your lerna packages for the other tools",
   "main": "lib",
   "files": [
