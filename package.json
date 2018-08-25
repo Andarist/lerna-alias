@@ -39,6 +39,6 @@
     "prettier": "^1.9.2"
   },
   "dependencies": {
-    "get-lerna-packages": "^0.1.0"
+    "get-lerna-packages": "^0.1.1"
   }
 }
